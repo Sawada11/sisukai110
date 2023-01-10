@@ -16,7 +16,7 @@
     <section class=" is-success mb-4">
         <div class="hero-body">
             <!-- <h1 class="title is-1"></h1> -->
-            <img src="../static/css/main_image.jpg">
+            <img src={% static "css/main_image.jpg" %}>
             <p> ログアウトは
                 <a href="{% url 'Logout' %}">こちら</a> <br>
                 <hr>
@@ -25,11 +25,11 @@
                 <a href="{% url 'profile_list' %}">マッチング</a> <br>
                 <hr>
             </p>
-                <p>{{user.account.last_name}}　{{user.account.first_name}}</p>
+                <p class="login__user">{{user.account.last_name}}　{{user.account.first_name}}</p>
             
         </div>
 
-        <div class="container">
+        <div class="containera">
             <div class="">
     
                 {% block content %}

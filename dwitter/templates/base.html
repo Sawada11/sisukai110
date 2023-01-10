@@ -10,20 +10,23 @@
     href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <title>Dwitter</title>
     <link rel="stylesheet" href="{% static 'css/dwitter.css' %}">
+    <link rel="stylesheet" href="{% static 'css/dwitter-pages.css' %}">
 </head>
 <body>
     <section class=" is-success mb-4">
         <div class="hero-body">
-
+            <!-- <h1 class="title is-1"></h1> -->
+            <img src="../static/css/main_image.jpg">
             <p> ログアウトは
-                <a href="{% url 'Logout' %}">こちら</a>
-                <a href="{% url 'dashboard' %}">ホーム</a>
-                <a href="{% url 'profile_list' %}">マッチング</a>
-                <p>{{user.account.last_name}}　{{user.account.first_name}}</p>
-            <h1 class="title is-1">Dwitter</h1>
-            <p class="subtitle is-4">
-                Your tiny social network built with Django
+                <a href="{% url 'Logout' %}">こちら</a> <br>
+                <hr>
+                <a href="{% url 'dashboard' %}">ホーム</a> <br>
+                <hr>
+                <a href="{% url 'profile_list' %}">マッチング</a> <br>
+                <hr>
             </p>
+                <p>{{user.account.last_name}}　{{user.account.first_name}}</p>
+            
         </div>
 
         <div class="container">

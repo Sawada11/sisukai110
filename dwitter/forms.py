@@ -37,6 +37,8 @@ class DweetForm(forms.ModelForm):
         fields = ("body", )
 
 class CommentCreateForm(forms.ModelForm):
+
+
     """コメントフォーム"""
     class Meta:
         model = Comment

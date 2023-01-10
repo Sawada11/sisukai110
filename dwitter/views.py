@@ -90,6 +90,7 @@ class CommentView(LoginRequiredMixin, DetailView):
         context = super(CommentView, self).get_context_data(**kwargs)
         context.update({
             'comment': Comment.objects.all(),
+            'account': Account.objects.all(),
         })
         return context
 
